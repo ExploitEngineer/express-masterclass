@@ -4,7 +4,7 @@ import cors from 'cors';
 const app = express();
 
 // Global middleware
-app.ue(cros());
+app.use(cors());
 app.use(express.json());
 
 // Custom middleware

@@ -1,3 +1,4 @@
 node_modules/
 .env
 syllabus.yaml
+/express_v5/node_modules

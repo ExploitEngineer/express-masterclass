@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "What is Express ? 1). Minimal and flexible web framework for Node.js 2). Used for building server-side web applications and APIs 3). The most popular framework for node 4). Simplifies the process of handling HTTP requests and responses 5). Express is a very fast and unopinionated framework",
     "main": "index.js",
+    "type" : "module",
     "scripts": {
         "start": "node server",
         "dev": "node --watch --env-file=.env server"
@@ -10,7 +11,6 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "type": "commonjs",
     "dependencies": {
         "express": "^4.21.2"
     }

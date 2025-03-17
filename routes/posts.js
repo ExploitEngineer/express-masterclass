@@ -27,6 +27,7 @@ router.get('/:id', (req, res, next) => {
 
     if (!post) {
         const error = new Error(`A post with the id of ${id} was not found`);
+        error.status = 404;
         return next(error);
     }
     res.status(200).json(post);

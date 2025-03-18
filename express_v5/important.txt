@@ -1,0 +1,13 @@
+express_v5/
+│
+├── node_modules/
+├── public/           # For static files (like images, CSS, JS)
+├── src/              # Your main backend code folder
+│   ├── app.js        # Main application file
+│   ├── routes/       # All route files go here
+│   │   └── videoRoutes.js
+│   ├── controllers/  # Your route handlers (logic)
+│   │   └── videoController.js
+├── .gitignore        # To ignore node_modules and .env
+├── .env              # Environment variables
+├── package.json

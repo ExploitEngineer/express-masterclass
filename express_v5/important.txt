@@ -1,13 +1,20 @@
 express_v5/
 │
-├── node_modules/
-├── public/           # For static files (like images, CSS, JS)
-├── src/              # Your main backend code folder
-│   ├── app.js        # Main application file
-│   ├── routes/       # All route files go here
-│   │   └── videoRoutes.js
-│   ├── controllers/  # Your route handlers (logic)
-│   │   └── videoController.js
-├── .gitignore        # To ignore node_modules and .env
-├── .env              # Environment variables
-├── package.json
+├── node_modules/          # Installed dependencies (auto-generated)
+├── public/                # For static files (like images, CSS, JS)
+│   └── css/               # CSS files if any
+├── src/                   # Main backend code folder
+│   ├── app.js             # Main application file
+│   ├── routes/            # All route files go here
+│   │   ├── indexRoutes.js  # Routes for general pages (Home, About, etc.)
+│   │   └── videoRoutes.js  # Routes for CRUD operations
+│   ├── controllers/       # Your route handlers (logic)
+│   │   ├── indexController.js  # Logic for index routes (home, about)
+│   │   └── videoController.js  # Logic for CRUD operations
+│   ├── middleware/        # Custom middleware files
+│   │   └── logger.js       # Simple logger middleware
+│   └── views/             # EJS template files
+│       └── index.ejs       # Main template file
+├── .gitignore             # To ignore node_modules and .env
+├── .env                   # Environment variables (e.g., PORT)
+├── package.json           # Dependencies and scripts

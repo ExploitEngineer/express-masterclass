@@ -5,14 +5,19 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
+        "start": "node scr/server.js",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "node --env-file=.env server.js"
+        "dev": "nodemon --env-file=.env src/server.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "cors": "^2.8.5",
+        "ejs": "^3.1.10",
         "express": "^5.0.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.9"
     }
 }

@@ -2,3 +2,6 @@ node_modules/
 .env
 syllabus.yaml
 /express_v5/node_modules
+/express_v5/.env
+/new_express/node_modules
+/new_express/.env

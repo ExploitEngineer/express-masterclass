@@ -5,9 +5,13 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 const mockUsers = [
-  { id: 1, useranme: "anson", displayName: "Anson" },
-  { id: 2, useranme: "jack", displayName: "Jack" },
-  { id: 3, useranme: "adam", displayName: "Adam" },
+  { id: 1, username: "anson", displayName: "Anson" },
+  { id: 2, username: "jack", displayName: "Jack" },
+  { id: 3, username: "adam", displayName: "Adam" },
+  { id: 4, username: "tina", displayName: "Tina" },
+  { id: 5, username: "jason", displayName: "Jason" },
+  { id: 6, username: "henry", displayName: "Henry" },
+  { id: 7, username: "marilyn", displayName: "Marilyn" },
 ];
 
 app.get("/", (request, response) => {
@@ -15,7 +19,18 @@ app.get("/", (request, response) => {
 });
 
 app.get("/api/users", (request, response) => {
-  response.send(mockUsers);
+  console.log(request.query);
+  const {
+    query: { filter, value },
+  } = request;
+  // when filter & value are undefined
+  if (filter && value) {
+    return response.send(
+      mockUsers.filter((user) => user[filter].includes(value))
+    );
+  }
+
+  return response.send(mockUsers);
 });
 
 app.get("/api/users/:id", (request, response) => {
@@ -39,4 +54,4 @@ app.listen(PORT, function () {
 
 // localhost:3000
 // localhost:3000/users
-// localhost:3000/products
+// localhost:3000/products?key=value&key2=value2

@@ -58,6 +58,24 @@ app.get("/api/products", (request, response) => {
   response.send([{ id: 123, name: "chicken breast", price: 12.99 }]);
 });
 
+app.put("/api/users/:id", (request, response) => {
+  const {
+    body,
+    params: { id },
+  } = request;
+
+  const parsedId = parseInt(id);
+  if (isNaN(parsedId)) return response.sendStatus(400);
+
+  const findUserIndex = mockUsers.findIndex((user) => user.id === parsedId);
+
+  if (findUserIndex === -1) return response.sendStatus(400);
+
+  mockUsers[findUserIndex] = { id: parsedId, ...body };
+
+  return response.sendStatus(200);
+});
+
 app.listen(PORT, function () {
   console.log(`Server is running on port ${PORT}`);
 });
@@ -65,3 +83,6 @@ app.listen(PORT, function () {
 // localhost:3000
 // localhost:3000/users
 // localhost:3000/products?key=value&key2=value2
+// PUT => if you are updating the full document
+// PATCH => if you are updating the document but some values not the full document
+// DELETE

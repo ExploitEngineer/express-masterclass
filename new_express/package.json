@@ -12,6 +12,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "cookie-parser": "^1.4.7",
         "cors": "^2.8.5",
         "express": "^5.0.1",
         "express-validator": "^7.2.1"

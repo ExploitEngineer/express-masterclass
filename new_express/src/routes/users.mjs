@@ -20,6 +20,14 @@ router.get(
     .isLength({ min: 3, max: 10 })
     .withMessage("Must be altest 3-10 characters"),
   (request, response) => {
+    console.log(request.sessionID);
+    request.sessionStore.get(request.sessionID, (err, sessionData) => {
+      if (err) {
+        console.log(err);
+        throw err;
+      }
+      console.log(sessionData);
+    });
     const result = validationResult(request);
     console.log(result);
     const {

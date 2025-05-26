@@ -41,3 +41,14 @@ Common HTTP Status Codes in Express
 500 Internal Server Error: Something broke
 502 Bad Gateway
 503 Service Unavailable
+
+
+What are Query Parameters ?
+Query parameters are extra data send by the client in the URL after a ?.
+They are usually used to:
+. Search/filter Content
+. Sort results
+. Control pagination (e.g., page 1, limit 10)
+. Send not-sensitive info to the server
+NOTE:
+if query params is missing, its value will be undefined

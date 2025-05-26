@@ -1,0 +1,9 @@
+1. Introduction to Express.js
+
+Express.js is a minimal & flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It simplifies the process of building server-side applications by providing a suite of HTTP utility methods and middleware, making it easier to create APIs and handle various web functionalities.
+
+Why use Express.js ?
+. Simplicity: Minimalist structure allows for quick setup and development.
+. Flexibility: Middleware architecture enables customization and scalability.
+. Performance: Built on Node.js, it offers non-blocking, event-driven architecture.
+. Community Support: Extensive community & plethora of plugins/middleware.

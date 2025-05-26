@@ -9,6 +9,7 @@ import { mockUsers } from "../utils/constants.mjs";
 import { createUserValidationSchema } from "../utils/validationSchema.mjs";
 import { resolveIndexByUserId } from "../utils/middlewares.mjs";
 import { User } from "../mongoose/schemas/user.mjs";
+import { hashPassword } from "../utils/helpers.mjs";
 
 const router = Router();
 
@@ -59,6 +60,11 @@ router.post(
 
     const result = validationResult(request);
     if (!result.isEmpty()) return response.send(result.array());
+
+    const data = matchedData(request);
+    console.log(data);
+    data.password = hashPassword(data.password);
+    console.log(data);
     const newUser = new User(body);
     try {
       const savedUser = await newUser.save();

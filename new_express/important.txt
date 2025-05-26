@@ -7,3 +7,9 @@ Why use Express.js ?
 . Flexibility: Middleware architecture enables customization and scalability.
 . Performance: Built on Node.js, it offers non-blocking, event-driven architecture.
 . Community Support: Extensive community & plethora of plugins/middleware.
+
+
+
+What is a GET Request ?
+A GET request is one of the HTTP methods used by the client (borwser, mobile, app, etc.) to ask the server for data - typically to read or retrieve something (e.g., web page, JSON data, etc.)
+It's idempotent, meaning calling it multiple times won't change anything on the server.

@@ -72,3 +72,16 @@ What is DELETE method ?
 The DELETE HTTP method is used to remove a specific resource from the server, permanently.
 
 
+What is Middleware in Express ?
+A middleware ia function that runs before your route handler (req, res) and has access to: (req, res, next).
+Middleware can:
+. Modify the request (req)
+. Modity the response (res)
+. End the request-response cycle
+. Call next() to pass control to the next middleware
+
+
+What is express-validator ?
+express-validator is a set of Express.js middlewares that wraps the extensive collection of validators and sanitizers offered by validator.js. It allows you to validate and sanitize incoming request data in a declarative and readable manner.
+
+

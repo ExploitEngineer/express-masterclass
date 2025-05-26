@@ -85,3 +85,27 @@ What is express-validator ?
 express-validator is a set of Express.js middlewares that wraps the extensive collection of validators and sanitizers offered by validator.js. It allows you to validate and sanitize incoming request data in a declarative and readable manner.
 
 
+What are Cookies 🍪 ?
+Cookies are small pieces of data stored in the browser of a user.
+They are mainly used to:
+. Remember users (e.g., keep them looged in)
+. Store session info (e.g., items in a cart)
+. Track user behaviour (e.g., for analytics or authentication)
+They are sent automatically with every request made to the same domain.
+
+
+Why use Cookies in Express ?
+Imagine this:
+. A user logs in
+. You want to remember this user on every request they make
+. You store a cookie in the user's browser with their user ID, token, or session ID.
+Then every time they send a request to your server, you can read that cookie to identify who the user is.
+No need to keep sending login data everytime.
+
+
+What is cookie-parser ?
+It's a middleware that:
+. Parses cookies from the browser
+. Makes them avaliable on req.cookies
+. Can handle signed cookies for extra security
+

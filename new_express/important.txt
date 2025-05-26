@@ -66,3 +66,9 @@ The PUT method is used to fully udpate or replace a resource. It expects all upd
 
 What is PATCH request ?
 The PATCH method is used to partially update a resource. You send only the fields that need to be changed. It is also idempotent in most practical APIs, but updates only what's specified.
+
+
+What is DELETE method ?
+The DELETE HTTP method is used to remove a specific resource from the server, permanently.
+
+

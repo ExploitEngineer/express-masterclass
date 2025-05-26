@@ -52,3 +52,9 @@ They are usually used to:
 . Send not-sensitive info to the server
 NOTE:
 if query params is missing, its value will be undefined
+
+
+What is a POST reqeust ?
+. POST is an HTTP method used to send data to the server.
+. Unlike GET, it doesn't expose data in the URL.
+. Used for creating the resources, like new users, posts, comments, etc.

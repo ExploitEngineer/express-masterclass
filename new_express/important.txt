@@ -13,3 +13,31 @@ Why use Express.js ?
 What is a GET Request ?
 A GET request is one of the HTTP methods used by the client (borwser, mobile, app, etc.) to ask the server for data - typically to read or retrieve something (e.g., web page, JSON data, etc.)
 It's idempotent, meaning calling it multiple times won't change anything on the server.
+
+
+Common HTTP Status Codes in Express
+✅ 1xx – Informational (Rarely used)
+100 Continue
+101 Switching Protocols
+
+✅ 2xx – Success
+200 OK: Request succeeded (default success)
+201 Created: Resource created (e.g. in POST)
+204 No Content: Success, but no data returned
+
+⚠️ 3xx – Redirection
+301 Moved Permanently
+302 Found (Temporary redirect)
+304 Not Modified (cache optimization)
+
+❌ 4xx – Client Errors
+400 Bad Request: Invalid request data
+401 Unauthorized: Login required
+403 Forbidden: Not allowed
+404 Not Found: Route/resource doesn't exist
+409 Conflict: Duplicate data or resource state conflict
+
+💥 5xx – Server Errors
+500 Internal Server Error: Something broke
+502 Bad Gateway
+503 Service Unavailable

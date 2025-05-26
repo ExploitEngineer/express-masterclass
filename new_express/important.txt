@@ -58,3 +58,11 @@ What is a POST reqeust ?
 . POST is an HTTP method used to send data to the server.
 . Unlike GET, it doesn't expose data in the URL.
 . Used for creating the resources, like new users, posts, comments, etc.
+
+
+What is PUT request ?
+The PUT method is used to fully udpate or replace a resource. It expects all updatable fields to be included in the request. It is idempotent, meaning multiple indentical requests result in the same state.
+
+
+What is PATCH request ?
+The PATCH method is used to partially update a resource. You send only the fields that need to be changed. It is also idempotent in most practical APIs, but updates only what's specified.

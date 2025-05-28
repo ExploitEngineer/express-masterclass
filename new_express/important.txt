@@ -109,3 +109,93 @@ It's a middleware that:
 . Makes them avaliable on req.cookies
 . Can handle signed cookies for extra security
 
+🧠 9. Summary / Notes for Your Revision
+cookie-parser:          Middleware to read cookies
+req.cookies:	        Access unsigned cookies
+req.signedCookies:  	Access signed cookies
+signed: true:       	Protect cookie with secret
+httpOnly:           	JS cannot access
+secure:             	Only over HTTPS
+maxAge:             	Duration for cookie
+res.cookie():       	Set cookie
+res.clearCookie():     	Remove cookie
+
+
+What is Mongoose ?
+Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It provides a schema-based solution to model your application data.
+
+
+What use Mongoose ?
+. Schema Definition: Define the structure of your documnets.
+. Validation: Built-in type casting and validation.
+. Middleware: Pre & post hooks for operations.
+. Abstraction: Simplifies MongoDB operations.
+
+
+✨ KEY MONGOOSE TOPICS YOU MUST MASTER
+Schema:
+    	Defines the structure of documents
+Model:
+    	Provides methods like .find(), .save(), .create()
+save():
+    	Saves a new document
+find(), findOne():
+    	            Retrieve documents
+updateOne(), findByIdAndUpdate():
+    	                            Update a document
+deleteOne(), findByIdAndDelete():
+    	                            Remove document
+validation:
+            Enforce data constraints
+middleware:
+    	    Pre/post hooks like pre('save')
+virtuals:
+    	    Fake fields that don't exist in DB but appear in JS
+timestamps:
+    	    Auto-manage createdAt and updatedAt
+populate():
+    	    Reference documents from another collection
+ref:
+    Used in schema for populate() feature
+lean():
+    	Returns plain JavaScript objects instead of Mongoose docs
+
+
+The Best Express JS Folder Structure
+express-app/
+│
+├── config/                # Configuration files
+│   ├── db.js              # Mongoose DB connection
+│   └── session.js         # Session and cookie configuration
+│
+├── controllers/           # Business logic for routes
+│   ├── authController.js
+│   └── userController.js
+│
+├── middleware/            # Custom middleware
+│   ├── auth.js            # Authentication middleware
+│   └── validator.js       # Custom validator functions
+│
+├── models/                # Mongoose models
+│   └── User.js
+│
+├── routes/                # Express routes
+│   ├── authRoutes.js
+│   └── userRoutes.js
+│
+├── utils/                 # Helper utilities (e.g., hash, token)
+│   └── hashPassword.js
+│
+├── views/                 # EJS templates
+│   ├── layout.ejs
+│   ├── login.ejs
+│   └── dashboard.ejs
+│
+├── public/                # Static files (CSS, JS, images)
+│   └── css/
+│
+├── .env                   # Environment variables
+├── .gitignore
+├── app.js                 # Main app entry
+├── package.json
+└── README.md

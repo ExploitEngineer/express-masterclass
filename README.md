@@ -169,7 +169,7 @@ express-masterclass/
 ## ✅ Complete Setup
 - Clone the repository:
   ```bash
-  git clone <repository-url>
+  git clone https://github.com/ExploitEngineer/express-masterclass.git
   ```
 - Install dependencies:
   ```bash
